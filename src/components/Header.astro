@@ -1,0 +1,142 @@
+---
+const siteTitle = "Ética";
+
+---
+
+<header class="header">
+    <div class="container">
+        <h1 class="site-title">{siteTitle}</h1>
+        <div class="card">
+        <div class="loader">
+            <p>La etica es </p>
+            <div class="words">
+            <span class="word">Moralidad</span>
+            <span class="word">Responsabilidad</span>
+            <span class="word">Justicia</span>
+            <span class="word">Integridad</span>
+            <span class="word">Honestidad</span>
+            </div>
+        </div>
+        </div>
+    </div>
+</header>
+
+<style>
+    .header {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 1rem 0;
+        height: 254px;
+        border-radius: 20px;
+        padding: 5px;
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    .site-title {
+        font-size: 5rem;
+        margin: 0;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5), 0 0 40px rgba(255, 0, 255, 0.5), 0 0 55px rgba(255, 0, 255, 0.5);
+    }
+    .loader {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 125%;
+        text-wrap: nowrap;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        height: 40px;
+        padding: 10px 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; 
+        border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+        .loader {
+                scale: 0.8;
+            }
+        
+    }
+
+    .words {
+        overflow: hidden;
+        position: relative;
+        height: 100%;   
+        margin-top: 26px;
+    }
+        .words::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            var(--bg-color) 10%,
+            transparent 30%,
+            transparent 70%,
+            var(--bg-color) 90%
+        );
+        z-index: 20;
+    }
+
+        .word {
+        display: block;
+        height: 100%;
+        padding-left: 6px;
+        color: rgb(106, 248, 255);
+        text-shadow: 0 0 5px rgb(255, 255, 255)  , 0 0 10px rgba(0, 221, 255, 0.5) ;
+        animation: spin_4991 4s infinite;
+    }
+
+        @keyframes spin_4991 {
+        10% {
+            -webkit-transform: translateY(-102%);
+            transform: translateY(-102%);
+        }
+
+        25% {
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
+
+        35% {
+            -webkit-transform: translateY(-202%);
+            transform: translateY(-202%);
+        }
+
+        50% {
+            -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+        }
+
+        60% {
+            -webkit-transform: translateY(-302%);
+            transform: translateY(-302%);
+        }
+
+        75% {
+            -webkit-transform: translateY(-300%);
+            transform: translateY(-300%);
+        }
+
+        85% {
+            -webkit-transform: translateY(-402%);
+            transform: translateY(-402%);
+        }
+
+        100% {
+            -webkit-transform: translateY(-400%);
+            transform: translateY(-400%);
+        }
+    }
+</style>
