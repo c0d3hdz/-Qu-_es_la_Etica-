@@ -1,7 +1,7 @@
 ---
 unidad: El sentido de aprender sobre Ética
-title: 1.1. Definición y naturaleza de la ética
-description: ¿Qué es la ética?
+title: 1.2. Importancia de aprender ética
+description: Tomar decisiones informadas
 ---
 
 La ética ayuda a evaluar consecuencias y decidir en función de principios.

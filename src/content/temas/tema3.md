@@ -1,7 +1,7 @@
 ---
 unidad: El sentido de aprender sobre Ética
-title: 1.1. Definición y naturaleza de la ética
-description: ¿Qué es la ética?
+title: 1.3. Relación de la ética con otras disciplinas
+description: Ética en la ciencia y tecnología
 ---
 
 Exploración de temas éticos en medicina, ingeniería, y tecnología.
