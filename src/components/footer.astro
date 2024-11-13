@@ -1,0 +1,95 @@
+---
+const teamMembers = [
+    {
+        name: "Damian Marquez Hernandez",
+        description: "",
+        image: "/images/damian.jpg"
+    },
+    {
+        name: "Elvin Esli Mendoza Gomez",
+        description: "",
+        image: "/images/Esli.jpg"
+    },
+    {
+        name: "Karen Lizeth Vargas Amador ",
+        description: "",
+        image: "/images/karen.jpg"
+    },
+    {
+        name : "Alondra Hitamar Morales Telléz",
+        description: "",
+        image: "/images/alondra.jpg"
+    }
+];
+---
+
+<footer class="footer">
+    <div class="container">
+        <h2>Miembros del equipo</h2>
+        <div class="team-cards">
+            {teamMembers.map(member => (
+                <div class="card">
+                    <img src={member.image} alt={member.name} class="card-img" />
+                    <div class="card-content">
+                        <h3>{member.name}</h3>
+                        <p>{member.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: #f8f9fa;
+        padding: 2rem 0;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    .team-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+    .card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 3px;
+        overflow: hidden;
+        width: calc(33.333% - 1rem);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card-img {
+        width: 100%;
+        height: auto;
+    }
+    .card-content {
+        padding: 1rem;
+    }
+    .card-content h3 {
+        margin: 0 0 0.5rem;
+    }
+    .card-content p {
+        margin: 0.5rem 0;
+    }
+        @media (max-width: 600px) {
+        .team-cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        }
+        .card {
+            width: 100%;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 1rem 1px;
+        }
+    }
+
+</style>
