@@ -1,18 +1,35 @@
 ---
 import { getCollection, render } from 'astro:content';
 
-const temas = await getCollection('temas');
+interface Tema {
+  data: {
+    unidad: string;
+    title: string;
+    description: string;
+  };
+}
+
+const temas: Tema[] = await getCollection('temas');
 export const prerender = true;
+
+const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) => {
+  const { unidad } = tema.data;
+  if (!acc[unidad]) {
+    acc[unidad] = [];
+  }
+  acc[unidad].push(tema);
+  return acc;
+}, {});
 ---
 
-<section>
-  {temas.map(async (tema: { data: any; }) => {
-    const { data } = tema;
-    const { unidad, title, description } = data;
-    const { Content } = await render(tema);
-    return (
-      <>
-        <h2 class="title_teme">{unidad}</h2>
+{Object.entries(temasPorUnidad).map(([unidad, temas]) => (
+  <section>
+    <h2 class="title_teme">{unidad}</h2>
+    {temas.map(async (tema) => {
+      const { data } = tema;
+      const { title, description } = data;
+      const { Content } = await render(tema);
+      return (
         <div class="card">
           <div>
             <h3 class="text-gradient">{title}</h3>
@@ -20,10 +37,10 @@ export const prerender = true;
             <span class="content"><Content /></span>
           </div>
         </div>
-      </>
-    );
-  })}
-</section>
+      );
+    })}
+  </section>
+))}
 
 <style>
   .card {
@@ -33,7 +50,6 @@ export const prerender = true;
     border-radius: 8px;
     color: #ffffff;
     box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
-
     background-image: radial-gradient(black 55%, #0000),
       linear-gradient(
         135deg,
@@ -41,35 +57,31 @@ export const prerender = true;
         blue,
         indigo,
         deeppink,
-        crimson,
-        cyan,
-        blue,
-        indigo,
-        deeppink
+        crimson
       );
-  background-size: 100% 0.3%, contain;
-}
-.description {
-  color: #ffffff;
-  font-size: 1.5em;
-  font-weight: 800;
-}
-.content {
-  color: #ffffff;
-  font-size: 0.8em;
-  font-weight: 400;
-}
-.title_teme {
-  color: #ffffff;
-  background: linear-gradient(to right, blue, pink);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2em;
-  font-weight: 800;
-}
-.text-gradient {
-  background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    background-size: 100% 0.3%, contain;
+  }
+  .description {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+  .content {
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+  .title_teme {
+    color: #ffffff;
+    background: linear-gradient(to right, blue, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    font-weight: 800;
+  }
+  .text-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 </style>
