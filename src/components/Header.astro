@@ -1,22 +1,21 @@
 ---
 const siteTitle = "Ética";
-
 ---
 
 <header class="header">
     <div class="container">
         <h1 class="site-title">{siteTitle}</h1>
         <div class="card">
-        <div class="loader">
-            <p>La etica es </p>
-            <div class="words">
-            <span class="word">Moralidad</span>
-            <span class="word">Responsabilidad</span>
-            <span class="word">Justicia</span>
-            <span class="word">Integridad</span>
-            <span class="word">Honestidad</span>
+            <div class="loader">
+                <p>La ética es </p>
+                <div class="words">
+                    <span class="word">Moralidad</span>
+                    <span class="word">Responsabilidad</span>
+                    <span class="word">Justicia</span>
+                    <span class="word">Integridad</span>
+                    <span class="word">Honestidad</span>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </header>
@@ -65,9 +64,8 @@ const siteTitle = "Ética";
 
     @media (max-width: 600px) {
         .loader {
-                scale: 0.8;
-            }
-        
+            scale: 0.8;
+        }
     }
 
     .words {
@@ -76,7 +74,7 @@ const siteTitle = "Ética";
         height: 100%;   
         margin-top: 26px;
     }
-        .words::after {
+    .words::after {
         content: "";
         position: absolute;
         inset: 0;
@@ -89,54 +87,37 @@ const siteTitle = "Ética";
         z-index: 20;
     }
 
-        .word {
+    .word {
         display: block;
         height: 100%;
         padding-left: 6px;
         color: rgb(106, 248, 255);
-        text-shadow: 0 0 5px rgb(255, 255, 255)  , 0 0 10px rgba(0, 221, 255, 0.5) ;
-        animation: spin_4991 4s infinite;
+        text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgba(0, 221, 255, 0.5);
+        animation: spin 5s infinite;
+        transition: ease-in-out;
     }
 
-        @keyframes spin_4991 {
-        10% {
-            -webkit-transform: translateY(-102%);
-            transform: translateY(-102%);
+    @keyframes spin {
+        0% {
+            transform: translateY(50%);
         }
-
-        25% {
-            -webkit-transform: translateY(-100%);
+        1% ,15% {
+            transform: translateY(0);
+        }
+        20%, 35% {
             transform: translateY(-100%);
         }
-
-        35% {
-            -webkit-transform: translateY(-202%);
-            transform: translateY(-202%);
-        }
-
-        50% {
-            -webkit-transform: translateY(-200%);
+        40%, 65% {
             transform: translateY(-200%);
         }
-
-        60% {
-            -webkit-transform: translateY(-302%);
-            transform: translateY(-302%);
-        }
-
-        75% {
-            -webkit-transform: translateY(-300%);
+        70%, 85% {
             transform: translateY(-300%);
         }
-
-        85% {
-            -webkit-transform: translateY(-402%);
-            transform: translateY(-402%);
-        }
-
-        100% {
-            -webkit-transform: translateY(-400%);
+        90%, 95% {
             transform: translateY(-400%);
+        }
+        100% {
+            transform: translateY(-450%);
         }
     }
 </style>
