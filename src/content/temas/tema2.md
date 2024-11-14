@@ -1,12 +1,10 @@
 ---
 id: tema2
-unidad: El sentido de aprender sobre Ética.
-title: 1.2 Vivir la ética
-description: La ética no se aprende únicamente de forma teórica. Se aprende y se aplica en la vida cotidiana a través de la vivencia ética. En lugar de memorizar principios éticos, aprendemos a vivirlos mediante experiencias y ejemplos en nuestra interacción con el mundo.
+unidad: El sentido de aprender sobre Ética
+title: 1.1.1 Desarrollo histórico de la ética
+description: Análisis del desarrollo de la ética en la antigüedad a través de los pensamientos de Sócrates, Platón, Aristóteles y Epicuro.
 ---
 
-La **ética vivencial** tiene un componente práctico en la toma de decisiones diarias. En el contexto laboral, por ejemplo, los principios éticos guían el comportamiento profesional. El **Código de Ética Profesional** en campos como la medicina, la abogacía o la ingeniería establece normas claras para actuar con responsabilidad y honestidad. Los profesionales en estos campos deben tomar decisiones que afectan a la vida de las personas, lo que hace fundamental un marco ético para garantizar que sus acciones sean justas y bien intencionadas.
+La historia de la ética comienza con filósofos de la antigua Grecia como **Sócrates**, quien creía que la ética era fundamental para vivir una buena vida y enseñaba que el conocimiento de lo que es bueno lleva a una conducta justa. **Platón**, su discípulo, expandió esta idea y afirmó que las virtudes son esenciales para una vida armoniosa, y desarrolló la teoría de las Formas, en la cual el Bien supremo es un ideal eterno.
 
-Según teorías psicológicas como las de **Albert Bandura**, las personas aprenden observando el comportamiento de los demás y modelando sus propias conductas en función de esos ejemplos. Este proceso de socialización comienza en la familia y la escuela, donde nos enseñan valores como la honestidad, la justicia y la responsabilidad. 
-
-Por lo tanto, la ética vivencial se forma y se refuerza en los contextos sociales en los que vivimos, lo que nos lleva a una comprensión más profunda y aplicada de lo que significa tomar decisiones éticas en situaciones cotidianas.
+**Aristóteles** propuso la ética como una búsqueda de la eudaimonía (felicidad o bienestar) mediante la virtud y el equilibrio, conocida como la *doctrina del justo medio*. Finalmente, **Epicuro** destacó que la ética debe centrarse en la búsqueda de placer y la ausencia de dolor como medio para alcanzar una vida tranquila y placentera. Cada uno de estos filósofos contribuyó significativamente a la forma en que se conciben los principios éticos hoy en día.
