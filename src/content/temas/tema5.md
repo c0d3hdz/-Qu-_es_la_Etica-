@@ -1,14 +1,10 @@
 ---
 id: tema5
-unidad: El sentido sociocultural de la Ética
-title: 2.2 Ética y Sociedad
-description: La ética no solo afecta a individuos, sino también a la sociedad en su conjunto. En una sociedad ética, las leyes y políticas públicas deben ser diseñadas para promover el bienestar común y asegurar que todos los individuos tengan acceso a los derechos y oportunidades fundamentales.
+unidad: El sentido de aprender sobre Ética
+title: 1.2 Valores éticos
+description: Importancia de los valores éticos en la formación de individuos responsables y sociedades justas.
 ---
 
-La ética social se refiere a cómo las **leyes** y **políticas públicas** deben ser formuladas para promover el bienestar colectivo. Por ejemplo, las políticas públicas sobre **salud**, **educación** y **pobreza** deben diseñarse con principios éticos fundamentales como la **justicia social** y la **equidad**. 
+Los valores éticos son fundamentales para guiar el comportamiento humano en sociedad. Estos valores, como el respeto, la responsabilidad y la justicia, son principios que orientan la conducta hacia el bienestar común y la convivencia pacífica.
 
-Un ejemplo de cómo la ética influye en la sociedad es el **movimiento por los derechos civiles** en los Estados Unidos. Este movimiento luchó por la igualdad racial y contra la segregación, defendiendo principios de justicia y equidad, que son valores clave en la ética social.
-
-En una sociedad ética, las leyes y políticas no solo deben garantizar la protección de los derechos de las personas, sino también promover la equidad y la justicia social. Esto implica que las decisiones gubernamentales deben ser tomadas con un enfoque ético que considere los intereses de todos los ciudadanos, especialmente los más vulnerables.
-
-La ética social también está presente en la **protección ambiental**. Las políticas de reciclaje, por ejemplo, no solo son una cuestión práctica, sino también ética, ya que buscan preservar el medio ambiente para las futuras generaciones.
+Adquirir valores éticos fomenta la formación de individuos íntegros y con un sentido de compromiso hacia los demás, lo cual es esencial para una sociedad justa y solidaria.
