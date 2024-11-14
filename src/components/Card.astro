@@ -26,7 +26,7 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
 
 {Object.entries(temasPorUnidad).map(([unidad, temas]) => (
   <section>
-    <h2 class="title_teme">{unidad}</h2>
+    <h2  transition:name={`unidad-${unidad}`} class="title_teme">{unidad}</h2>
     {temas.map((tema) => {
       const { data } = tema;
       const { title, description, slug ,id } = data;
@@ -34,7 +34,9 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
         <a href={`/tema/${id}`} style="text-decoration: none;">
           <div class="card">
             <div>
-              <h3 class="text-gradient">{title}</h3>
+              <h3 transition:name={`name-${title}`} class="text-gradient">
+                  {title}
+              </h3>
               <span class="description">{description}</span>
             </div>
             <br/>

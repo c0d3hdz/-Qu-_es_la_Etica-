@@ -23,11 +23,11 @@ const { unidad, title, description } = tema?.data || {};
     <main>
         <Back />
         <section>
-            <h2 class="title_teme">{unidad}</h2>
+            <h2 transition:name={`unidad-${unidad}`} class="title_teme">{unidad}</h2>
             <div>
             <div>
-                <h3 class="text-gradient">{title}</h3>
-                <span class="description">{description}</span>
+                <h3 transition:name={`name-${title}`} class="text-gradient">{title}</h3>
+                <span  class="description">{description}</span>
                 <div class="content"><Content /></div>
             </div>
             </div>
