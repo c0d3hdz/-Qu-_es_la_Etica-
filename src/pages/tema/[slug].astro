@@ -21,7 +21,7 @@ const { unidad, title, description } = tema?.data || {};
 
 <Layout title=`${title}`>
     <main>
-        <Back />
+        <Back value=`${slug}` />
         <section>
             <h2 transition:name={`unidad-${unidad}`} class="title_teme">{unidad}</h2>
             <div>
