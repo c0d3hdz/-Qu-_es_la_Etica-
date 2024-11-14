@@ -1,11 +1,13 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 interface Tema {
   data: {
     unidad: string;
     title: string;
     description: string;
+    id: string;
+    slug: string;
   };
 }
 
@@ -25,18 +27,20 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
 {Object.entries(temasPorUnidad).map(([unidad, temas]) => (
   <section>
     <h2 class="title_teme">{unidad}</h2>
-    {temas.map(async (tema) => {
+    {temas.map((tema) => {
       const { data } = tema;
-      const { title, description } = data;
-      const { Content } = await render(tema);
+      const { title, description, slug ,id } = data;
       return (
-        <div class="card">
-          <div>
-            <h3 class="text-gradient">{title}</h3>
-            <span class="description">{description}</span>
-            <span class="content"><Content /></span>
+        <a href={`/tema/${id}`} style="text-decoration: none;">
+          <div class="card">
+            <div>
+              <h3 class="text-gradient">{title}</h3>
+              <span class="description">{description}</span>
+            </div>
+            <br/>
+            <span class="boton_de_ilucionxddd"> Ver mas... </span>
           </div>
-        </div>
+        </a>
       );
     })}
   </section>
@@ -63,8 +67,8 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
   }
   .description {
     color: #ffffff;
-    font-size: 1.5em;
-    font-weight: 800;
+    font-size: 1.2em;
+    font-weight: 400;
   }
   .content {
     color: #ffffff;
@@ -83,5 +87,15 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
     background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .boton_de_ilucionxddd{
+    border-bottom: solid 1px #ffffff;
+    border-radius: 4px;
+    padding: 6px;
+    background: linear-gradient(45deg ,#ffff , #0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+    font-weight: 400;
   }
 </style>

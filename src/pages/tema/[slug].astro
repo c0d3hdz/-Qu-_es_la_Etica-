@@ -1,0 +1,68 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Back from '../../components/Back.astro';
+export async function getStaticPaths() {
+    const temas = await getCollection('temas');
+    return temas.map((tema) => ({
+        params: { slug: tema.slug },
+    }));
+}
+
+const { slug } = Astro.params;
+const temas = await getCollection('temas');
+const tema = temas.find(t => t.slug === slug);
+
+
+const { Content } = await render(tema);
+console.log(tema);
+const { unidad, title, description } = tema?.data || {};
+---
+
+<Layout title=`${title}`>
+    <main>
+        <Back />
+        <section>
+            <h2 class="title_teme">{unidad}</h2>
+            <div>
+            <div>
+                <h3 class="text-gradient">{title}</h3>
+                <span class="description">{description}</span>
+                <div class="content"><Content /></div>
+            </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+.content {
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.title_teme {
+    color: #ffffff;
+    background: linear-gradient(to right, blue, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    font-weight: 800;
+}
+.text-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+
+</style>

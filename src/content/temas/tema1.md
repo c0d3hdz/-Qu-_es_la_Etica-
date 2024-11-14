@@ -1,4 +1,5 @@
 ---
+id: tema1
 unidad: El sentido de aprender sobre Ética.
 title: 1.1 ¿Qué es la ética?
 description: La ética se ocupa de lo que es moralmente correcto, justo y adecuado en nuestra conducta. Como disciplina filosófica, se pregunta por el sentido de nuestras acciones y cómo deberían alinearse con los principios de justicia y bienestar colectivo.
@@ -8,4 +9,4 @@ La ética está presente en cada aspecto de nuestra vida, desde las decisiones p
 
 La ética, como disciplina filosófica, aborda lo que es moralmente correcto. Los filósofos éticos, como **Aristóteles**, han planteado teorías sobre la virtud y el carácter, mientras que **Immanuel Kant** defendió la importancia de las reglas universales en su ética deontológica. En contraste, los utilitaristas como **John Stuart Mill** promueven la maximización del bienestar colectivo. Cada una de estas teorías ofrece diferentes perspectivas sobre cómo debemos actuar en situaciones que involucran el bien común y el sufrimiento individual.
 
-En resumen, la ética no solo busca definir lo correcto, sino también proporcionarnos un marco para entender el impacto de nuestras decisiones en un contexto social más amplio.  
+En resumen, la ética no solo busca definir lo correcto, sino también proporcionarnos un marco para entender el impacto de nuestras decisiones en un contexto social más amplio.

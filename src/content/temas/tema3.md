@@ -1,4 +1,5 @@
 ---
+id: tema3
 unidad: "El sentido de aprender sobre Ética."
 title: "1.3 Ética y psicología: una relación esencial"
 description: "La ética no solo se encuentra en la filosofía, sino también en otras disciplinas, como la psicología. Mientras que la psicología estudia las motivaciones y el comportamiento humano, la ética se enfoca en cómo esos comportamientos deben alinearse con los valores y normas sociales."

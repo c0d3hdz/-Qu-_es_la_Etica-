@@ -1,4 +1,5 @@
 ---
+id: tema6
 unidad: El sentido sociocultural de la Ética
 title: 2.3 Ética y Desarrollo Sostenible
 description: El desarrollo sostenible es el resultado de un enfoque ético que busca equilibrar el crecimiento económico con la conservación del medio ambiente y la justicia social.

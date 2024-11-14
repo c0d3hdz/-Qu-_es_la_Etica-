@@ -1,4 +1,5 @@
 ---
+id: tema2
 unidad: El sentido de aprender sobre Ética.
 title: 1.2 Vivir la ética
 description: La ética no se aprende únicamente de forma teórica. Se aprende y se aplica en la vida cotidiana a través de la vivencia ética. En lugar de memorizar principios éticos, aprendemos a vivirlos mediante experiencias y ejemplos en nuestra interacción con el mundo.

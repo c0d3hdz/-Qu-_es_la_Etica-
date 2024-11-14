@@ -1,4 +1,5 @@
 ---
+id: tema5
 unidad: El sentido sociocultural de la Ética
 title: 2.2 Ética y Sociedad
 description: La ética no solo afecta a individuos, sino también a la sociedad en su conjunto. En una sociedad ética, las leyes y políticas públicas deben ser diseñadas para promover el bienestar común y asegurar que todos los individuos tengan acceso a los derechos y oportunidades fundamentales.

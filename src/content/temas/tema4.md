@@ -1,4 +1,5 @@
 ---
+id: tema4
 unidad: El sentido sociocultural de la Ética
 title: 2.1 Ética y Cultura
 description: La ética también está profundamente influenciada por la cultura. Las normas que guían nuestras decisiones morales están, en gran medida, moldeadas por el contexto cultural en el que vivimos.
