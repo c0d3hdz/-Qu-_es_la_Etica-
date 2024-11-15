@@ -36,7 +36,7 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
           <div class="card" id={`${slug}`}>
             <img 
               class="image_teme" 
-              src={`/src/img/${id}.jpg`} 
+              src={`/${id}.jpg`}
               alt={`${id}`}/>
             <div>
               <h3 transition:name={`name-${title}`} class="text-gradient">
