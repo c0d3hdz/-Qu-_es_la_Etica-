@@ -2,18 +2,21 @@
 const teamMembers = [
     {
         name: "Damian Marquez Hernandez",
-        description: "",
-        image: "/images/damian.jpg"
+        function: "Desarrollador",
+        description: "La etica es uno de los temas de la humanidad mas facinante",
+        image: "https://avatars.githubusercontent.com/u/145168535?v=4"
     },
     {
         name: "Elvin Esli Mendoza Gomez",
+        function:"Responsable de la documentación",
         description: "",
-        image: "/images/Esli.jpg"
+        image: "https://avatars.githubusercontent.com/u/121978941?v=4"
     },
     {
         name: "Karen Lizeth Vargas Amador ",
+        function:"Jugando con el diseño",
         description: "",
-        image: "/images/karen.jpg"
+        image: "https://avatars.githubusercontent.com/u/162728875?v=4"
     },
     {
         name : "Alondra Hitamar Morales Telléz",
@@ -22,74 +25,113 @@ const teamMembers = [
     }
 ];
 ---
-
 <footer class="footer">
-    <div class="container">
-        <h2>Miembros del equipo</h2>
-        <div class="team-cards">
-            {teamMembers.map(member => (
-                <div class="card">
-                    <img src={member.image} alt={member.name} class="card-img" />
-                    <div class="card-content">
-                        <h3>{member.name}</h3>
-                        <p>{member.description}</p>
-                    </div>
-                </div>
-            ))}
+    {teamMembers.map(member => (
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src={member.image} alt={member.name} class="card-img" />
+                <p class="title title_teme">{member.name}</p>
+                <p class="funcion">{member.function}</p>
+            </div>
+            <div class="flip-card-back">
+                <p class="title">Conclusion</p>
+                <p>{member.description}</p>
+            </div>
         </div>
     </div>
+    ))}
 </footer>
 
 <style>
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+@media (max-width: 1200px) {
     .footer {
-        background: linear-gradient(to bottom, #ffffff00, #f8f9faac);
-        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10rem;
     }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-    .team-cards {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 1rem;
-    }
-    .card {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 3px;
-        overflow: hidden;
-        width: calc(33.333% - 1rem);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .card-img {
-        width: 100%;
-        height: auto;
-    }
-    .card-content {
-        padding: 1rem;
-    }
-    .card-content h3 {
-        margin: 0 0 0.5rem;
-    }
-    .card-content p {
-        margin: 0.5rem 0;
-    }
-        @media (max-width: 600px) {
-        .team-cards {
+    
+}
+@media (max-width: 600px) {
+    .footer {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        }
-        .card {
-            width: 100%;
-        }
-        .footer {
-           
-            padding: 1rem 1px;
-        }
+        gap: 1rem;
     }
+    
+}
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.funcion {
+    font-size: 1em;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+}
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 354px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
 
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+.flip-card-front {
+    background: linear-gradient(120deg, #d9a7ff00 30%, #fd85f309 88%, #fac3ff 40%, rgba(255, 80, 182, 0.603) 78%);
+    color: #ffffff;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #d9a7ff00 30%, #fd85f309 88%, #fac3ff 40%, rgba(255, 80, 182, 0.603) 78%);
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
 </style>
