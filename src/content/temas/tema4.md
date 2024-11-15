@@ -1,7 +1,7 @@
 ---
 id: tema4
 unidad: El sentido de aprender sobre Ética
-title: 1.1.3 Ramas de la ética: metaética, normativa y aplicada
+title: 1.1.3 Ramas de la ética. metaética, normativa y aplicada
 description: Clasificación de la ética en tres ramas principales que ayudan a entender su enfoque y aplicación en diversos contextos.
 ---
 

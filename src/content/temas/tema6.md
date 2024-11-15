@@ -1,7 +1,7 @@
 ---
 id: tema6
 unidad: El sentido de aprender sobre Ética
-title: 1.2.1 Respeto y responsabilidad; 1.2.2 Respeto a la vida, a la diversidad y a la naturaleza
+title: 1.2.1 Respeto y responsabilidad.
 description: Exploración de los valores éticos del respeto y la responsabilidad, abarcando el respeto a la vida, la diversidad y la naturaleza como componentes esenciales de una convivencia ética y armónica.
 ---
 

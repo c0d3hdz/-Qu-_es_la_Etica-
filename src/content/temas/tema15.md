@@ -1,7 +1,7 @@
 ---
 id: tema15
 unidad: Ética en el ejercicio de la profesión
-title: 3.3 Deontología: Consideraciones generales de la ética profesional
+title: 3.3 Deontología. Consideraciones generales de la ética profesional
 description: La deontología estudia los deberes y obligaciones éticas de los profesionales en sus respectivos campos, estableciendo normas de conducta y principios morales.
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: tema7
 unidad: El sentido de aprender sobre Ética
-title: 1.2.2 Dignidad; 1.2.3 Libertad; 1.2.4 Amor (propio, al prójimo, a la patria); 1.2.5 Gratitud (perdón y redención); 1.2.6 Equidad (empatía, solidaridad, fraternidad, de género)
+title: 1.2.2 Dignidad, Libertad, Amor, Gratitud, Equidad.
 description: Análisis de valores éticos fundamentales como la dignidad, la libertad, el amor, la gratitud y la equidad, incluyendo su importancia y aplicaciones en la vida personal y social.
 ---
 

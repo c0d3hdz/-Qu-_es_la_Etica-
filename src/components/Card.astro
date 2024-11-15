@@ -26,13 +26,18 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
 
 {Object.entries(temasPorUnidad).map(([unidad, temas]) => (
   <section>
-    <h2  transition:name={`unidad-${unidad}`} class="title_teme">{unidad}</h2>
+    <h2 transition:name={`unidad-${unidad}`} class="title_teme">{unidad}</h2>
+    <div class="menu_temas">
     {temas.map((tema) => {
       const { data } = tema;
       const { title, description, slug ,id } = data;
       return (
         <a href={`/tema/${id}`} style="text-decoration: none;">
           <div class="card" id={`${slug}`}>
+            <img 
+              class="image_teme" 
+              src={`/src/img/${id}.jpg`} 
+              alt={`${id}`}/>
             <div>
               <h3 transition:name={`name-${title}`} class="text-gradient">
                   {title}
@@ -45,6 +50,7 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
         </a>
       );
     })}
+    </div>
   </section>
 ))}
 
@@ -66,16 +72,20 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
         crimson
       );
     background-size: 100% 0.3%, contain;
-    transition: transform 0.5s , background-size 0.7s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    height: auto;
   }
   .card:hover {
     transform: scale(1.05);
-    background-size: 100% 0.9%, contain;
-    transition: transform 0.5s , background-size 0.7s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    .image_teme{
+      opacity: 0.5;
+      transition: opacity 0.5s ease-in-out;
+    }
   }
   .description {
     color: #ffffff;
-    font-size: 1.2em;
+    font-size: 0.8em;
     font-weight: 400;
   }
   .content {
@@ -106,4 +116,32 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
     font-size: 1.2em;
     font-weight: 400;
   }
+  .menu_temas {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    width: 100%;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+  }
+  .image_teme {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  @media (max-width: 600px) {
+    .menu_temas {
+      grid-template-columns: auto;
+    }
+  }
+
 </style>

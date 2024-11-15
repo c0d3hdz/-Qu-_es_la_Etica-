@@ -15,7 +15,6 @@ const tema = temas.find(t => t.slug === slug);
 
 
 const { Content } = await render(tema);
-console.log(tema);
 const { unidad, title, description } = tema?.data || {};
 ---
 
@@ -24,6 +23,10 @@ const { unidad, title, description } = tema?.data || {};
         <Back value=`${slug}` />
         <section>
             <h2 transition:name={`unidad-${unidad}`} class="title_teme">{unidad}</h2>
+            <img 
+            class="image_teme"
+            src=`/src/img/${slug}.jpg` 
+            alt=`image-${slug}`>
             <div>
             <div>
                 <h3 transition:name={`name-${title}`} class="text-gradient">{title}</h3>
@@ -53,6 +56,13 @@ const { unidad, title, description } = tema?.data || {};
     background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.image_teme{
+    white-space: nowrap;
+    width: 260px;
+    height: 260px;
+    border-radius: 15px;
+    margin: 0;
 }
 main {
 		margin: auto;
