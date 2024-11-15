@@ -132,10 +132,10 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
   }
   @media (max-width: 600px) {
     .menu_temas {
-      grid-template-columns: auto;
-    }
-    .image_teme {
-      opacity: 0.3;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
     }
   }
 </style>
