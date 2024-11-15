@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-
 interface Tema {
   data: {
     unidad: string;
@@ -26,17 +25,17 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
 
 {Object.entries(temasPorUnidad).map(([unidad, temas]) => (
   <section>
-    <h2 transition:name={`unidad-${unidad}`} class="title_teme">{unidad}</h2>
+    <h2 class="title_teme">{unidad}</h2>
     <div class="menu_temas">
     {temas.map((tema) => {
       const { data } = tema;
-      const { title, description, slug ,id } = data;
+      const { title, description, slug, id } = data;
       return (
-        <a href={`/tema/${id}`} style="text-decoration: none;">
+        <a href={`/tema/${slug}`} style="text-decoration: none;">
           <div class="card" id={`${slug}`}>
             <img 
               class="image_teme" 
-              src={`/${id}.jpg`}
+              src={`/${id}.jpg`} 
               alt={`${id}`}/>
             <div>
               <h3 transition:name={`name-${title}`} class="text-gradient">
@@ -56,6 +55,8 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
 
 <style>
   .card {
+    position: relative;
+    overflow: hidden;
     border: 1px solid #ffffff;
     padding: 16px;
     margin-top: 16px;
@@ -72,20 +73,21 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
         crimson
       );
     background-size: 100% 0.3%, contain;
-    transition: transform 0.5s ease-in-out;
-    height: auto;
+    transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
   .card:hover {
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
-    .image_teme{
-      opacity: 0.5;
-      transition: opacity 0.5s ease-in-out;
+    .image_teme {
+
+      opacity: 0.3;
+      filter: blur(0px);
+      transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
     }
   }
   .description {
     color: #ffffff;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: 400;
   }
   .content {
@@ -106,18 +108,7 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .boton_de_ilucionxddd{
-    border-bottom: solid 1px #ffffff;
-    border-radius: 4px;
-    padding: 6px;
-    background: linear-gradient(45deg ,#ffff , #0000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.2em;
-    font-weight: 400;
-  }
   .menu_temas {
-    margin: auto;
     display: grid;
     grid-template-columns: auto auto;
     gap: 1rem;
@@ -131,17 +122,20 @@ const temasPorUnidad = temas.reduce((acc: Record<string, Tema[]>, tema: Tema) =>
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
     opacity: 0;
-    z-index: -1;
     pointer-events: none;
+    filter: blur(3px);
   }
   @media (max-width: 600px) {
     .menu_temas {
       grid-template-columns: auto;
     }
+    .image_teme {
+      opacity: 0.3;
+    }
   }
-
 </style>
