@@ -7,6 +7,8 @@ description: Clasificación de la ética en tres ramas principales que ayudan a 
 
 La ética se divide en tres ramas principales que permiten abordar sus diferentes dimensiones:
 
-1. **Metaética**: Examina el origen y el significado de los conceptos éticos, preguntándose, por ejemplo, si los valores morales son universales o subjetivos.
-2. **Ética normativa**: Se enfoca en establecer normas o principios que guíen el comportamiento, tales como teorías sobre el deber y la justicia.
+1. **Metaética**: Examina el origen y el significado de los conceptos éticos, busca explicar los principios que guian a las decisiones morales.
+
+2. **Ética normativa**: Se enfoca en establecer normas o principios que guíen el comportamiento, tales como teorías sobre el deber y la justicia,  determinando lo que es bueno y lo que es malo.
+
 3. **Ética aplicada**: Se ocupa de aplicar los principios éticos en situaciones específicas, abordando problemas como la ética médica, profesional y ambiental.
