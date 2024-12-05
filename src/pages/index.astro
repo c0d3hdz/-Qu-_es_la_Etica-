@@ -11,7 +11,10 @@ import Intro from '../components/Intro.astro';
 		<Header/>
 		<br/>
 		<Intro/>
-		<Card/>
+		<div>
+			<h2 >Publicaciones</h2>
+			<Card/>
+		</div>
 	</main>
 	<Footer/>
 </Layout>
@@ -25,5 +28,10 @@ import Intro from '../components/Intro.astro';
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+	}
+	h2{
+		background: linear-gradient(to right, blue, pink);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 	}
 </style>
